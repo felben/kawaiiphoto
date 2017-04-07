@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Photo Editor?</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="css/images/favicon-32x32.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script type="text/javascript" src="http://fiddle.jshell.net/js/lib/mootools-core-1.4.5-nocompat.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <h1 id="filters">
+                        Adjust:
+                    </h1>
+                <label for="hue" title="Change the color or shade of your image">Hue</label>
+                <input class="sliders"id="hue" name="hue" type="range" min="0" max="300" value="0">
+                <li>
+                    <label for="contrast" title="Change the dark and light tones">Contrast</label>
+                    <input class="sliders" id="contrast" name="contrast" type="range" min="-100" max="100" value="0">
+                </li>
+
+                <li>
+                    <label for="brightness">Brightness</label>
+                    <input class="sliders" id="brightness" name="brightness" type="range" min="-100" max="100" value="0">
+                </li>
+
+                <li>
+                    <label for="exposure">Exposure</label>
+                    <input class="sliders"id="exposure" name="exposure" type="range" min="-100" max="100" value="0">
+                </li>
+
+                <li>
+                    <label for="saturation">Saturation</label>
+                    <input class="sliders" id="saturation" name="saturation" type="range" min="-100" max="100" value="0">
+                </li>
+                <h1 id="filters">
+                        Filters:
+                </h1>
+                <li>
+                    <button id="vintagebtn" class="kbutts" title="Age your photo to an older time in the past.">Vintage</button>
+                </li>
+                <li>
+                    <button id="noisebtn" class="kbutts"  title="Simulate film grain in your photo">Noise</button>
+                </li>
+                <li>
+                    <button id="tiltshiftbtn" class="kbutts" title="Simulates the change of focus for a blur effect">Tilt Shift</button>
+                </li>
+
+                <li>
+                    <button id="greyscalebtn" class="kbutts" title="Change your photo to Black and White">GreyScale</button>
+                </li>
+
+                <li>
+                    <button id="sepiabtn" class="kbutts" title="Add a reddish-brown color overlay remnant of the 1920's">Sepia</button>
+                </li>
+
+                <li>
+                    <button id="pinholebtn" class="kbutts" title="Adds a 'Dark Chamber' effect similar to a DIY camera">Pinhole</button>
+                </li>
+
+                <li>
+                    <button id="invertbtn" class="kbutts" title="A complete contrast change for a visual dissability.">Invert</button>
+                </li>
+
+                <li>
+                    <button id="vig" class="kbutts" title="Darkening of image corners when compared to the center.">Vignette</button>
+                </li>
+                <li>
+
+                </li>
+                <li>
+                    <button id="resetbtn" class="kbutts">RESET PHOTO</button>
+                </li>
+                <li>
+                    <a id="download" href="#" class="kbutts" role="button">EXPORT PHOTO</a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="heads">Kawaii Shashin V.3</h1>
+                        <h3>*upload a photo for editing</h3>
+                        <canvas id="myCanvas" width=900 height=600></canvas>
+                        <input type="file" id="imageLoader" name="imageLoader" class="imageLoader" />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
